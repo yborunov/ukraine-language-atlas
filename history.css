@@ -1,0 +1,41 @@
+:root{font-family:Inter,system-ui,-apple-system,Segoe UI,sans-serif;color:#182b3a;background:#f5f2e9}
+*{box-sizing:border-box}
+body{margin:0}
+.masthead{background:#142f42;color:#fff;padding:28px max(16px,calc((100vw - 1206px)/2)) 20px}
+.masthead h1{font:700 clamp(30px,5vw,46px) Georgia,serif;margin:6px 0}
+.masthead p{margin:0;color:#c9dce4}
+.eyebrow{font-size:11px;font-weight:750;letter-spacing:.09em;text-transform:uppercase;color:#526574}
+.history-layout{display:grid;grid-template-columns:minmax(0,3fr) minmax(240px,1fr);gap:18px;align-items:start;max-width:1250px;margin:auto;padding:22px}
+.card{min-width:0;background:#fff;border:1px solid #d8d9d3;border-radius:14px;overflow:hidden;box-shadow:0 3px 16px #1b35420b}
+.timeline{padding:14px 18px}
+.year-row,.year-step,.range-ends,.map-controls{display:flex;align-items:center;justify-content:space-between;gap:8px}
+#year-display{font:700 2.25rem Georgia,serif;font-variant-numeric:tabular-nums}
+button,#year-number{color:#182b3a;font:inherit;border:1px solid #b7c8cd;border-radius:7px;background:#fff;padding:.36em .55em}
+button{cursor:pointer}
+button:hover,button[aria-pressed="true"]{background:#e4eff3;border-color:#51778a}
+button:disabled{opacity:.5;cursor:default}
+#year-number{width:5.5rem;text-align:center}
+#year-range{display:block;width:100%;min-height:30px;margin:3px 0 0;accent-color:#146386}
+.range-ends{font-size:.75rem;color:#526574}
+.milestones{display:flex;gap:6px;flex-wrap:wrap;margin-top:11px;font-size:.76rem}
+#political-map{display:block;width:100%;height:auto;background:#cfe3eb}
+.land{fill:#e5e7df}
+.polity{stroke:#fff;stroke-width:1.25;stroke-linejoin:round;vector-effect:non-scaling-stroke}
+.ukraine-outline{stroke:#164d75;stroke-width:2;stroke-dasharray:6 4;stroke-linejoin:round;vector-effect:non-scaling-stroke;pointer-events:none}
+.map-name,.kyiv-name{fill:#152735;paint-order:stroke;stroke:#fff;stroke-width:3.5;stroke-linejoin:round;pointer-events:none;font-weight:700}
+.map-name{text-anchor:middle}
+.kyiv-name{font-size:18px}
+.map-controls{justify-content:flex-start;padding:11px 18px;font-size:.85rem}
+.map-controls label{display:flex;align-items:center;gap:7px;cursor:pointer}
+.outline-key{width:26px;border-top:2px dashed #164d75}
+.map-info{padding:17px}
+.map-info h2{font:700 1.4rem Georgia,serif;margin:.3em 0}
+.map-info .eyebrow{margin:0}
+#map-note,.history-footer{color:#465b67;font-size:.83rem;line-height:1.55}
+#entity-list{padding:0;margin:10px 0 0;list-style:none;max-height:34rem;overflow:auto}
+#entity-list li{display:flex;gap:8px;align-items:baseline;padding:6px 0;border-top:1px solid #e4e9e7;font-size:.84rem}
+.swatch{display:inline-block;flex:none;width:11px;height:11px;border:1px solid #768a91;border-radius:2px}
+.history-footer{max-width:1250px;margin:0 auto 30px;padding:0 22px}
+.history-footer a{color:#125477}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+@media(max-width:760px){.history-layout{grid-template-columns:1fr;padding:12px}.timeline{padding-inline:12px}#entity-list{max-height:16rem}}

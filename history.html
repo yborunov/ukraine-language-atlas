@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Інтерактивна карта політичних кордонів Східної Європи від Київської Русі до сьогодення.">
+<title>Кордони в часі · Атлас Київської Русі</title>
+<link rel="stylesheet" href="atlas-nav.css">
+<link rel="stylesheet" href="history.css">
+<script defer src="history-data.js"></script>
+<script defer src="history-names.js"></script>
+<script defer src="history.js"></script>
+</head>
+<body>
+<header class="masthead">
+  <p class="eyebrow">Історичний атлас · Східна Європа</p>
+  <h1>Кордони в часі</h1>
+  <p>Від Київської Русі до сучасної України та її сусідів.</p>
+</header>
+<nav class="atlas-tabs" aria-label="Карти атласу">
+  <a href="./">Говори Русі</a>
+  <a href="history.html" aria-current="page">Кордони в часі</a>
+</nav>
+<main class="history-layout">
+  <section class="card map-card" aria-label="Інтерактивна карта">
+    <div class="timeline">
+      <div class="year-row">
+        <div><label class="eyebrow" for="year-range">Рік на карті</label><div id="year-display">1000</div></div>
+        <div class="year-step"><button type="button" id="prev-year" aria-label="Попередній рік">−</button><label class="sr-only" for="year-number">Введіть рік</label><input id="year-number" type="number" min="882" max="2026" value="1000"><button type="button" id="next-year" aria-label="Наступний рік">+</button></div>
+      </div>
+      <input id="year-range" type="range" min="882" max="2026" step="1" value="1000">
+      <div class="range-ends"><span>882</span><span id="max-year">2026</span></div>
+      <div class="milestones" aria-label="Обрані роки">
+        <button type="button" data-year="1000">1000 · Київська Русь</button>
+        <button type="button" data-year="1240">1240</button>
+        <button type="button" data-year="1670">1670</button>
+        <button type="button" data-year="1795">1795</button>
+        <button type="button" data-year="1919">1919 · УНР</button>
+        <button type="button" data-year="1992">1992</button>
+        <button type="button" data-year="now">Сьогодні</button>
+      </div>
+    </div>
+    <svg id="political-map" viewBox="0 0 960 790" role="img" aria-labelledby="map-title">
+      <title id="map-title">Політична карта Східної Європи</title>
+      <defs><pattern id="occupation" patternUnits="userSpaceOnUse" width="8" height="8" patternTransform="rotate(35)"><rect width="8" height="8" fill="#ece3dc"/><path d="M0 0V8" stroke="#8b554b" stroke-width="3"/></pattern></defs>
+      <g id="land"></g><g id="polities"></g>
+      <path id="ukraine-outline" class="ukraine-outline" fill="none"/>
+      <g id="map-labels"></g><g id="kyiv-marker"></g>
+    </svg>
+    <div class="map-controls">
+      <label><input id="show-ukraine" type="checkbox" checked> Сучасний кордон України</label>
+      <span class="outline-key" aria-hidden="true"></span>
+    </div>
+    <noscript><p class="map-controls">Для зміни року потрібен JavaScript.</p></noscript>
+  </section>
+  <aside class="card map-info" aria-labelledby="entities-title">
+    <p class="eyebrow" id="era">Історичні межі</p>
+    <h2 id="entities-title">Держави й території</h2>
+    <p id="map-note"></p>
+    <ul id="entity-list"></ul>
+  </aside>
+</main>
+<footer class="history-footer">
+  <p><strong>Як читати карту.</strong> Рік показує території за датуванням джерела, а не стан на конкретний день. Той самий контур може охоплювати кілька років; у середньовіччі межі часто були нечіткими. Сірі ділянки означають, що джерело не віднесло їх до нанесених територій. Дрібні назви, яким бракує місця, є у списку біля карти.</p>
+  <p><strong>Джерела.</strong> Історичні дані: Seshat Global History Databank, <a href="https://github.com/Seshat-Global-History-Databank/cliopatria/tree/v0.2.1">Cliopatria v0.2.1</a> (<a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>; <a href="https://doi.org/10.1038/s41597-025-04516-9">опис методики</a>). Сучасні кордони та берегова лінія: <a href="https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-0-countries/">Natural Earth</a>, версія з погляду України. Контури обрізано до регіону й спрощено для екрана.</p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,5 @@
+.atlas-tabs{display:flex;gap:.4rem;padding:0 max(12px,calc((100vw - 1206px)/2));background:#142f42;border-bottom:1px solid #193749}
+.atlas-tabs a{padding:.65rem .9rem;text-decoration:none;font-size:.875rem;font-weight:700;color:#c9dce4;border-radius:8px 8px 0 0}
+.atlas-tabs a:hover{background:#25465a;color:#fff}
+.atlas-tabs a[aria-current="page"]{background:#f5f2e9;color:#182b3a}
+.atlas-tabs a:focus-visible{outline:2px solid #9ad4ee;outline-offset:-3px}
