@@ -1,17 +1,11 @@
-# Dialects of Kyivan Rus' — Interactive Atlas
+# Говори Київської Русі — інтерактивний атлас
 
-A self-contained educational website about the medieval East Slavic dialect continuum.
+[Відкрити атлас](https://yborunov.github.io/kyivan-rus-dialects/)
 
-## Publish with GitHub Pages
+Україномовний освітній атлас східнослов’янських говорів приблизно 1050–1250 років. Оберіть кольорову зону на карті або в легенді, щоб переглянути мовні риси, приклади й джерела. Вимкніть діалектні зони, щоб роздивитися сучасні кордони.
 
-1. Create a **public** GitHub repository named `kyivan-rus-dialects`.
-2. Upload `index.html` to the repository root and commit it to the `main` branch.
-3. Open **Settings → Pages**.
-4. Under **Build and deployment**, select **Deploy from a branch**, choose `main` and `/ (root)`, then save.
-5. After GitHub deploys the site, open `https://YOUR-USERNAME.github.io/kyivan-rus-dialects/`.
+Кольорові зони — схематичне узагальнення мовних даних за різні століття. Вони не відтворюють політичних кордонів Київської Русі чи точних меж говорів.
 
-The site uses no dependencies, build tools, cookies, or API keys.
+Сучасні контури: [Natural Earth, Admin 0 Countries, Ukraine point of view](https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-0-countries/), [вихідний GeoJSON](https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_10m_admin_0_countries_ukr.geojson). Геометрію спрощено й обрізано до меж карти. Крим показано в межах України.
 
-## Research caution
-
-The colored polygons are conceptual and not surveyed medieval dialect boundaries. The atlas differentiates direct historical evidence from modern comparative examples. Some source links are research starting points rather than direct proof of the exact mapped polygon.
+GitHub Pages публікує `index.html` з кореня гілки `main`. Сторінка не потребує зовнішніх бібліотек чи збірки.
