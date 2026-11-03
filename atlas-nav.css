@@ -3,3 +3,4 @@
 .atlas-tabs a:hover{background:#25465a;color:#fff}
 .atlas-tabs a[aria-current="page"]{background:#f5f2e9;color:#182b3a}
 .atlas-tabs a:focus-visible{outline:2px solid #9ad4ee;outline-offset:-3px}
+@media(max-width:440px){.atlas-tabs{gap:0;flex-wrap:wrap}.atlas-tabs a{padding:.55rem .5rem;font-size:.8rem}}

@@ -1,0 +1,21 @@
+#modern-map{display:block;width:100%;height:auto;background:#e6edf0}
+.modern-region{stroke:#fff;stroke-width:1.2;cursor:pointer;vector-effect:non-scaling-stroke}
+.modern-region:hover,.modern-region:focus-visible,.modern-region[aria-pressed=true]{stroke:#173f55;stroke-width:2.2;outline:none}
+.modern-label{font-size:14px;font-weight:700;fill:#193747;paint-order:stroke;stroke:#fff;stroke-width:2.5;stroke-linejoin:round;text-anchor:middle;pointer-events:none}
+.modern-city{fill:#193747;stroke:#fff;stroke-width:2}
+.modern-city-hit{fill:transparent;cursor:pointer}
+.modern-city-hit:hover,.modern-city-hit:focus-visible,.modern-city-hit[aria-pressed=true]{fill:#14558333;stroke:#173f55;stroke-width:2;outline:none}
+.modern-controls{padding:14px 16px}
+.mode-buttons,.modern-selects,.modern-legend{display:flex;gap:8px 12px;align-items:center;flex-wrap:wrap}
+.mode-buttons button{min-height:42px}
+.modern-selects{margin-top:12px}
+.modern-selects label{display:flex;gap:6px;align-items:center;font-size:.85rem}
+.modern-selects label[hidden]{display:none}
+.modern-selects select{max-width:100%;font:inherit;min-height:38px;color:#182b3a;border:1px solid #b7c8cd;border-radius:6px;background:#fff;padding:4px}
+.modern-legend{font-size:.76rem}
+.legend-item{display:inline-flex;gap:5px;align-items:center}
+.legend-item .swatch{width:14px;height:12px}
+#layer-note,.map-info p{font-size:.86rem;line-height:1.5;color:#465b67}
+.map-info h3{font-size:.83rem;margin:1rem 0 .25rem;color:#284554}
+.map-info p:not(.eyebrow){margin:.25rem 0 .65rem}
+@media(max-width:760px){.mode-buttons button,.modern-selects select{min-height:44px}.atlas-tabs{flex-wrap:wrap}.atlas-tabs a{padding:.6rem}.modern-label{font-size:18px}.modern-label.secondary{display:none}}

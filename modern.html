@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Інтерактивна карта українських говорів і мовних спільнот сучасної України.">
+<title>Мови України · Атлас Київської Русі</title>
+<link rel="stylesheet" href="atlas-nav.css">
+<link rel="stylesheet" href="history.css">
+<link rel="stylesheet" href="modern.css">
+<script defer src="modern-boundaries.js"></script>
+<script defer src="modern-data.js"></script>
+<script defer src="modern.js"></script>
+</head>
+<body>
+<header class="masthead">
+  <p class="eyebrow">Мовний атлас · Сучасна Україна</p>
+  <h1>Мови й говори України</h1>
+  <p>Оберіть регіон і дослідіть місцеві говори, мови громад та дані опитування.</p>
+</header>
+<nav class="atlas-tabs" aria-label="Карти атласу">
+  <a href="./">Говори Русі</a>
+  <a href="history.html">Кордони в часі</a>
+  <a href="modern.html" aria-current="page">Мови України</a>
+</nav>
+<main class="history-layout">
+  <section class="card" aria-label="Інтерактивна карта України">
+    <svg id="modern-map" viewBox="0 0 925 615" role="group" aria-labelledby="modern-title">
+      <title id="modern-title">Адміністративні регіони України</title>
+      <defs id="map-patterns"></defs>
+      <g id="modern-regions"></g><g id="modern-labels" aria-hidden="true"></g>
+    </svg>
+    <div class="modern-controls">
+      <div class="mode-buttons" role="group" aria-label="Шар карти">
+        <button type="button" data-mode="dialects" aria-pressed="true">Говори</button>
+        <button type="button" data-mode="languages" aria-pressed="false">Мовні громади</button>
+        <button type="button" data-mode="survey" aria-pressed="false">Мова вдома · 2025</button>
+      </div>
+      <div class="modern-selects">
+        <label>Регіон <select id="pick-region"></select></label>
+        <label id="language-control" hidden>Мова громади <select id="pick-language"></select></label>
+      </div>
+      <p id="layer-note"></p>
+      <div id="modern-legend" class="modern-legend" aria-label="Легенда карти"></div>
+    </div>
+    <noscript><p class="modern-controls">Для роботи карти потрібен JavaScript.</p></noscript>
+  </section>
+  <aside class="card map-info" aria-labelledby="region-title" aria-live="polite">
+    <p class="eyebrow">Обраний регіон</p>
+    <h2 id="region-title">Закарпатська область</h2>
+    <h3>Традиційні українські говори</h3>
+    <p id="region-dialects"></p>
+    <h3>Мови місцевих громад</h3>
+    <p id="region-languages"></p>
+    <p id="region-context"></p>
+    <h3>Мова вдома · КМІС, 2025</h3>
+    <p id="region-survey"></p>
+  </aside>
+</main>
+<footer class="history-footer">
+  <p><strong>Як читати карту.</strong> Діалектні межі проходять усередині областей і переходять з однієї області в іншу. Українську жестову мову, ромські різновиди та їдиш не прив’язано до одного регіону. Шар громад показує вибрані документовані осередки, а не всіх мовців чи повний перелік мов. Війна, окупація та переміщення змінили мовне середовище; зіставних актуальних оцінок для кожної області немає.</p>
+  <p><strong>Джерела:</strong> <a href="https://www.encyclopediaofukraine.com/display.asp?linkpath=pages%5CD%5CI%5CDialects.htm">Енциклопедія України: діалекти</a> · <a href="https://2001.ukrcensus.gov.ua/results/">Перепис 2001 року</a> · <a href="https://www.coe.int/en/web/kyiv/-/impact-of-the-decentralisation-reform-on-national-minorities-in-ukraine-assessed-in-a-council-of-europe-report">Рада Європи: національні меншини</a> · <a href="https://rm.coe.int/ukrainepr5-en/1680b0e47b">Звіт України про мови меншин</a> · <a href="https://ppu.gov.ua/en/press-center/nayposhyrenishi-zapytannia-shchodo-korinnykh-narodiv-ukrainy/">Корінні народи України</a> · <a href="https://doi.org/10.1515/jnmlp-2017-0008">Мовна диференціація населення України</a> · <a href="https://www.kiis.com.ua/?lang=ukr&amp;cat=reports&amp;id=1513&amp;page=1">КМІС, 14 лютого – 4 березня 2025 року</a>.</p>
+  <p><strong>Кордони:</strong> міжнародно визнана територія України. Адміністративні межі адаптовано з <a href="https://www.geoboundaries.org/">geoBoundaries</a> / <a href="https://www.openstreetmap.org/copyright">© OpenStreetMap contributors</a>, <a href="https://opendatacommons.org/licenses/odbl/1-0/">ODbL 1.0</a>. <a href="modern-boundaries.js" download>Похідні дані меж</a>.</p>
+</footer>
+</body>
+</html>

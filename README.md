@@ -21,3 +21,9 @@ GitHub Pages публікує `index.html` з кореня гілки `main`. С
 ```sh
 python scripts/build-history.py cliopatria.geojson.zip ne_10m_admin_0_countries_ukr.geojson
 ```
+
+## Мови й говори України
+
+[Відкрити сучасну мовну карту](https://yborunov.github.io/kyivan-rus-dialects/modern.html). Карта охоплює 24 області, АР Крим, Київ і Севастополь. Є три окремі шари: традиційні українські говори, вибрані документовані мовні громади та опитування КМІС 2025 року про мову вдома за макрорегіонами. Шар громад не є повним переліком чи оцінкою сучасної чисельності. Джерела й межі їх застосування зазначено на сторінці карти.
+
+Адміністративні межі: [geoBoundaries gbOpen UKR ADM1](https://www.geoboundaries.org/api/current/gbOpen/UKR/ADM1/), © OpenStreetMap contributors, Wambacher; похідний файл `modern-boundaries.js` доступний під [ODbL 1.0](https://opendatacommons.org/licenses/odbl/1-0/). Для відтворення завантажте `simplifiedGeometryGeoJSON` із відповіді API та запустіть `python scripts/build-modern.py ukr-adm1.geojson` із Shapely 2.1+. Контури спрощено й перетворено на SVG.
