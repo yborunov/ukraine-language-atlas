@@ -23,6 +23,13 @@
 </nav>
 <main class="history-layout">
   <section class="card map-card" aria-label="Інтерактивна карта">
+    <svg id="political-map" viewBox="0 0 960 790" role="img" aria-labelledby="map-title">
+      <title id="map-title">Політична карта Східної Європи</title>
+      <defs><pattern id="occupation" patternUnits="userSpaceOnUse" width="8" height="8" patternTransform="rotate(35)"><rect width="8" height="8" fill="#ece3dc"/><path d="M0 0V8" stroke="#8b554b" stroke-width="3"/></pattern></defs>
+      <g id="land"></g><g id="polities"></g>
+      <path id="ukraine-outline" class="ukraine-outline" fill="none"/>
+      <g id="map-labels"></g><g id="kyiv-marker"></g>
+    </svg>
     <div class="timeline">
       <div class="year-row">
         <div><label class="eyebrow" for="year-range">Рік на карті</label><div id="year-display">1000</div></div>
@@ -40,13 +47,6 @@
         <button type="button" data-year="now">Сьогодні</button>
       </div>
     </div>
-    <svg id="political-map" viewBox="0 0 960 790" role="img" aria-labelledby="map-title">
-      <title id="map-title">Політична карта Східної Європи</title>
-      <defs><pattern id="occupation" patternUnits="userSpaceOnUse" width="8" height="8" patternTransform="rotate(35)"><rect width="8" height="8" fill="#ece3dc"/><path d="M0 0V8" stroke="#8b554b" stroke-width="3"/></pattern></defs>
-      <g id="land"></g><g id="polities"></g>
-      <path id="ukraine-outline" class="ukraine-outline" fill="none"/>
-      <g id="map-labels"></g><g id="kyiv-marker"></g>
-    </svg>
     <div class="map-controls">
       <label><input id="show-ukraine" type="checkbox" checked> Сучасний кордон України</label>
       <span class="outline-key" aria-hidden="true"></span>

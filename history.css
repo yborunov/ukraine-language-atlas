@@ -39,3 +39,8 @@ button:disabled{opacity:.5;cursor:default}
 .history-footer a{color:#125477}
 .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
 @media(max-width:760px){.history-layout{grid-template-columns:1fr;padding:12px}.timeline{padding-inline:12px}#entity-list{max-height:16rem}}
+@media(max-width:760px){
+  #year-range{min-height:44px;touch-action:pan-y}
+  .year-step button,.milestones button{min-height:44px}
+  .year-step button{min-width:44px}
+}
