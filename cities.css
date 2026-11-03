@@ -1,0 +1,14 @@
+#city-map{display:block;width:100%;height:auto;background:#e6edf0}
+#city-land path{fill:#f6f3e8;stroke:#d1d5ce;stroke-width:1;vector-effect:non-scaling-stroke}
+.city-pin{cursor:pointer}
+.city-pin .dot{stroke:#fff;stroke-width:1.6;vector-effect:non-scaling-stroke}
+.city-pin .hit{fill:transparent}
+.city-pin .ring{fill:none;stroke:#183c53;stroke-width:2;vector-effect:non-scaling-stroke;opacity:0}
+.city-pin:hover .ring,.city-pin:focus-visible .ring,.city-pin[aria-pressed=true] .ring{opacity:1}
+.city-pin:focus-visible{outline:none}
+.city-pin text{pointer-events:none;font-size:15px;font-weight:700;fill:#193747;paint-order:stroke;stroke:#fff;stroke-width:3;stroke-linejoin:round}
+.city-pin.no-data .dot{stroke:#707982}
+.city-selects{margin-top:0}
+#city-bars .census-bar-label{align-items:baseline}
+#city-multiple{font-size:.75rem}
+@media(max-width:760px){.city-pin text{font-size:21px}.city-pin:not(.major):not([aria-pressed=true]) text{display:none}}

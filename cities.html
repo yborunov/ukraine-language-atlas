@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Інтерактивна карта мов домашнього спілкування в містах України за муніципальним опитуванням 2024 року.">
+<title>Мови міст · Атлас Київської Русі</title>
+<link rel="stylesheet" href="atlas-nav.css">
+<link rel="stylesheet" href="history.css">
+<link rel="stylesheet" href="modern.css">
+<link rel="stylesheet" href="cities.css">
+<script defer src="modern-boundaries.js"></script>
+<script defer src="cities-data.js"></script>
+<script defer src="cities.js"></script>
+</head>
+<body>
+<header class="masthead">
+  <p class="eyebrow">Мовний атлас · Муніципальне опитування 2024 року</p>
+  <h1>Мови міст України</h1>
+  <p>Мови домашнього спілкування у 21 місті, зокрема у Києві, Харкові, Одесі, Дніпрі та Львові.</p>
+</header>
+<nav class="atlas-tabs" aria-label="Карти атласу">
+  <a href="./">Говори Русі</a>
+  <a href="history.html">Кордони в часі</a>
+  <a href="modern.html">Мови України</a>
+  <a href="cities.html" aria-current="page">Мови міст</a>
+</nav>
+<main class="history-layout">
+  <section class="card" aria-label="Інтерактивна карта міст України">
+    <svg id="city-map" viewBox="0 0 860 615" role="group" aria-labelledby="city-map-title">
+      <title id="city-map-title">Мови домашнього спілкування в містах України</title>
+      <g id="city-land" aria-hidden="true"></g><g id="city-markers"></g>
+    </svg>
+    <div class="modern-controls">
+      <div class="modern-selects city-selects">
+        <label>Місто <select id="pick-city"></select></label>
+        <label>Колір карти <select id="city-mode"></select></label>
+      </div>
+      <p id="layer-note">Кожна точка — окреме місто. Оберіть місто, щоб переглянути відповіді.</p>
+      <div id="city-legend" class="modern-legend" aria-label="Легенда карти"></div>
+    </div>
+    <noscript><p class="modern-controls">Для роботи карти потрібен JavaScript.</p></noscript>
+  </section>
+  <aside class="card map-info" aria-labelledby="city-title" aria-live="polite">
+    <p class="eyebrow">Мова вдома · 2024</p>
+    <h2 id="city-title">Київ</h2>
+    <p id="city-summary"></p>
+    <div id="city-bars" class="census-bars"></div>
+    <p id="city-multiple">Можна було назвати кілька мов, тому частки можуть у сумі перевищувати 100%.</p>
+  </aside>
+</main>
+<footer class="history-footer">
+  <p><strong>Джерело:</strong> <a href="https://www.iri.org/wp-content/uploads/2024/06/Ninth_Municipal-survey_May-2024_ENG-Final.pdf#page=178">дев’яте муніципальне опитування України, таблиця «Language spoken at home»</a>. Соціологічна група «Рейтинг» провела опитування на замовлення Міжнародного республіканського інституту (IRI) 13 квітня – 24 травня 2024 року. <a href="https://www.iri.org/news/iri-ukraine-municipal-poll-finds-desire-for-local-control-in-reconstruction-decrease-in-corruption-support-for-eu-and-nato-membership/">Методика</a>: 16 800 дорослих, похибка до ±3,5 відсоткового пункта для кожного міста.</p>
+  <p>Карта показує відповіді про спілкування вдома, а не рідну мову чи знання мов. Порожні точки позначають вибрані міста, яких не було у вибірці. Позначка «—» відтворює прочерк у таблиці; «&lt;1%» означає частку меншу за 1%. Категорія «Інша відповідь» не розбита за мовами.</p>
+  <p><strong>Кордони:</strong> <a href="https://www.geoboundaries.org/">geoBoundaries</a> / <a href="https://www.openstreetmap.org/copyright">© OpenStreetMap contributors</a>, <a href="https://opendatacommons.org/licenses/odbl/1-0/">ODbL 1.0</a>.</p>
+</footer>
+</body>
+</html>

@@ -29,3 +29,7 @@ python scripts/build-history.py cliopatria.geojson.zip ne_10m_admin_0_countries_
 Адміністративні межі: [geoBoundaries gbOpen UKR ADM1](https://www.geoboundaries.org/api/current/gbOpen/UKR/ADM1/), © OpenStreetMap contributors, Wambacher; похідний файл `modern-boundaries.js` доступний під [ODbL 1.0](https://opendatacommons.org/licenses/odbl/1-0/). Для відтворення завантажте `simplifiedGeometryGeoJSON` із відповіді API та запустіть `python scripts/build-modern.py ukr-adm1.geojson` із Shapely 2.1+. Контури спрощено й перетворено на SVG.
 
 Шар **«Рідна мова · 2001»** відображає 19 категорій [офіційної таблиці Держстату](https://2001.ukrcensus.gov.ua/i/u/cens2001.pdf) для всіх 27 регіонів. Частки розраховано від загальної чисельності населення регіону за переписом; «не вказали мову» враховано окремо. Це дані про рідну мову, не про сучасну мову спілкування. Для відтворення: `pdftotext -layout cens2001.pdf census.txt`, потім `python scripts/build-census.py census.txt`.
+
+## Мови міст
+
+[Відкрити карту міст](https://yborunov.github.io/kyivan-rus-dialects/cities.html). Частки для 21 міста взято з [дев’ятого муніципального опитування України, 2024, таблиця «Language spoken at home»](https://www.iri.org/wp-content/uploads/2024/06/Ninth_Municipal-survey_May-2024_ENG-Final.pdf#page=178). Опитування провела Соціологічна група «Рейтинг» на замовлення IRI. Відповіді можуть перетинатися; дані не нормалізовано до 100%. Вибрані міста поза вибіркою позначено порожніми точками. Географічна підкладка та її ліцензія збігаються з картою «Мови України».
