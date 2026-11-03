@@ -44,3 +44,6 @@ button:disabled{opacity:.5;cursor:default}
   .year-step button,.milestones button{min-height:44px}
   .year-step button{min-width:44px}
 }
+.timeline-media{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-top:10px;font-size:.85rem}
+.timeline-media a{color:#125477}
+@media(max-width:760px){.timeline-media button{min-height:44px}}

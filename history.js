@@ -89,12 +89,39 @@
     }));
   }
 
+  const play = $('play-timeline');
+  let playback = null;
+  function stop() {
+    if (playback === null) return;
+    cancelAnimationFrame(playback);
+    playback = null;
+    play.setAttribute('aria-pressed','false');
+    play.textContent = '▶ Відтворити';
+  }
+  play.addEventListener('click', () => {
+    if (playback !== null) { stop(); return; }
+    select(min);
+    play.setAttribute('aria-pressed','true');
+    play.textContent = '❚❚ Пауза';
+    let start;
+    const tick = now => {
+      start ??= now;
+      const next = min + Math.floor(Math.min(1, (now-start)/14000)*(max-min));
+      if (next !== year) render(next);
+      if (next === max) { stop(); return; }
+      playback = requestAnimationFrame(tick);
+    };
+    playback = requestAnimationFrame(tick);
+  });
+
   function select(value) {
+    stop();
     if (pending !== undefined) cancelAnimationFrame(pending);
     pending = undefined;
     render(value);
   }
   slider.addEventListener('input', () => {
+    stop();
     $('year-display').textContent = number.value = slider.value;
     if (pending !== undefined) cancelAnimationFrame(pending);
     pending = requestAnimationFrame(() => { pending = undefined; render(slider.valueAsNumber); });
